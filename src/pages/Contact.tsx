@@ -36,16 +36,36 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('http://localhost:3000/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
+      const data = await response.json();
 
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
+      if (data.success) {
+        toast({
+          title: "Message sent!",
+          description: "We'll get back to you as soon as possible.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error(data.error || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -202,9 +222,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Office Address</h3>
                     <p className="text-muted-foreground">
-                      123 Tech Plaza, Suite 400
+                      Sidi Bouzid
                       <br />
-                      San Francisco, CA 94105
+                      Tunisia
                     </p>
                   </div>
                 </div>
@@ -216,10 +236,11 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
                     <a
-                      href="tel:+1-555-123-4567"
+                      href="tel:+216-12-345-678"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      +1 (555) 123-4567
+                      +216 50281701<br></br>
+                      +216 29019040
                     </a>
                   </div>
                 </div>
@@ -231,10 +252,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
                     <a
-                      href="mailto:hello@techora.io"
+                      href="mailto:contact@techora.tn"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      hello@techora.io
+                      techora2026@gmail.com
                     </a>
                   </div>
                 </div>
@@ -257,16 +278,19 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="mt-12 aspect-video rounded-2xl bg-card border border-border overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center bg-secondary/50">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-muted-foreground text-sm">
-                      Interactive map would go here
-                    </p>
-                  </div>
-                </div>
+              {/* Map */}
+              <div className="mt-12 aspect-video rounded-2xl bg-card border border-border overflow-hidden shadow-3d hover:shadow-3d-hover transition-all duration-300">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104085.39958937666!2d9.428935492167352!3d35.0354388656148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fec90034a74797%3A0xe7585c5452f4af70!2sSidi%20Bouzid!5e0!3m2!1sen!2stn!4v1709489652311!5m2!1sen!2stn"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Techora Location"
+                  className="grayscale hover:grayscale-0 transition-all duration-500"
+                />
               </div>
             </div>
           </div>
