@@ -12,12 +12,13 @@ const projects = [
     link: "https://couvoiturage-hayder-jacer.netlify.app/",
   },
   {
-    title: "HealthHub Connect",
-    category: "Healthcare",
+    title: "BLACKLISTED TRADERS",
+    category: "E-Learning",
     description:
-      "Telemedicine platform connecting patients with healthcare providers, featuring video consultations, appointment scheduling, and health tracking.",
-    tech: ["React Native", "Firebase", "WebRTC", "AWS", "HIPAA Compliant"],
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop",
+      "Blacklisted Traders is an E-Learning platform that allows users to learn trading online.",
+    tech: ["React", "Node.js", "MongoDB", "express.js"],
+    image: "public/blacklisted.png",
+    link: "https://blacklistedtraders.netlify.app/",
   },
   {
     title: "LogiTrack Enterprise",
