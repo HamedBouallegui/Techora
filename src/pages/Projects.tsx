@@ -9,6 +9,7 @@ const projects = [
       "A ride share platform that connects drivers with riders, featuring real-time analytics, automated reporting, and AI-powered insights for enterprise clients.",
     tech: ["React", "Node.js", "MongoDB", "express.js"],
     image: "public/car.png",
+    link: "https://couvoiturage-hayder-jacer.netlify.app/",
   },
   {
     title: "HealthHub Connect",
@@ -127,9 +128,14 @@ const Projects = () => {
 
                 {/* Hover Link */}
                 <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity pulse-3d">
-                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:bg-primary/80 transition-colors">
+                  <a
+                    href={project.link || "#"}
+                    target={project.link ? "_blank" : "_self"}
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:bg-primary/80 transition-colors"
+                  >
                     <ExternalLink className="w-5 h-5 text-primary-foreground" />
-                  </div>
+                  </a>
                 </div>
               </div>
             ))}

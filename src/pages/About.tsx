@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Target, Eye, Users, Award, Lightbulb, Heart } from "lucide-react";
+import { Target, Eye, Users, Award, Lightbulb, Heart, Linkedin, Github, Globe } from "lucide-react";
 
 const values = [
   {
@@ -26,25 +26,23 @@ const values = [
 
 const team = [
   {
-    name: "Sarah Chen",
-    role: "CEO & Founder",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    name: "Hamed Bouallagui",
+    role: "Full Stack Developer",
+    image: "public/hamed.png",
+    linkedin: "https://www.linkedin.com/in/hamed-bouallegui/",
+    github: "https://github.com/HamedBouallegui",
+    portfolio: "https://hamedbouallagui.vercel.app/",
   },
   {
-    name: "Marcus Johnson",
-    role: "CTO",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    name: "Hayder Laabidi",
+    role: "Mobile Developer",
+    image: "public/hayder.png",
+    linkedin: "https://www.linkedin.com/in/hayder-labidi/",
+    github: "https://github.com/HayderLabidi",
+    portfolio: "https://hayderlabidi.netlify.app/",
   },
-  {
-    name: "Emily Rodriguez",
-    role: "Lead Designer",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-  },
-  {
-    name: "David Kim",
-    role: "Head of Engineering",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-  },
+
+
 ];
 
 const About = () => {
@@ -186,11 +184,11 @@ const About = () => {
               The talented people behind our success
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 perspective-2000">
+          <div className="flex flex-wrap justify-center gap-8 perspective-2000">
             {team.map((member) => (
               <div
                 key={member.name}
-                className="group text-center card-3d"
+                className="group text-center w-full max-w-xs"
               >
                 <div className="relative mb-4 rounded-2xl overflow-hidden aspect-square shadow-3d group-hover:shadow-3d-hover">
                   <img
@@ -198,7 +196,40 @@ const About = () => {
                     alt={member.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-center pb-6">
+                    <div className="flex gap-3 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      {member.linkedin && (
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-background/80 hover:bg-primary hover:text-primary-foreground flex items-center justify-center backdrop-blur-sm transition-all duration-200 shadow-lg cursor-pointer"
+                        >
+                          <Linkedin className="w-5 h-5" />
+                        </a>
+                      )}
+                      {member.github && (
+                        <a
+                          href={member.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-background/80 hover:bg-primary hover:text-primary-foreground flex items-center justify-center backdrop-blur-sm transition-all duration-200 shadow-lg cursor-pointer"
+                        >
+                          <Github className="w-5 h-5" />
+                        </a>
+                      )}
+                      {member.portfolio && (
+                        <a
+                          href={member.portfolio}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 rounded-full bg-background/80 hover:bg-primary hover:text-primary-foreground flex items-center justify-center backdrop-blur-sm transition-all duration-200 shadow-lg cursor-pointer"
+                        >
+                          <Globe className="w-5 h-5" />
+                        </a>
+                      )}
+                    </div>
+                  </div>
                 </div>
                 <h3 className="text-lg font-semibold">{member.name}</h3>
                 <p className="text-muted-foreground text-sm">{member.role}</p>
