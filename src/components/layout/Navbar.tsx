@@ -47,12 +47,12 @@ export const Navbar = () => {
           >
             <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
               <img
-                src="/techora-logo.png"
-                alt="Techora Logo"
+                src="/alphatech-logo.png"
+                alt="AlphaTech Logo"
                 className="w-full h-full object-contain"
               />
             </div>
-            <span className="hidden sm:block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Techora</span>
+            <span className="hidden sm:block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">AlphaTech</span>
           </Link>
 
           {/* Desktop Navigation */}

@@ -19,7 +19,7 @@ const socialLinks = [
   { icon: Linkedin, href: "#", label: "LinkedIn" },
   { icon: Twitter, href: "#", label: "Twitter" },
   { icon: Github, href: "#", label: "GitHub" },
-  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61585852116307", label: "Facebook" },
 ];
 
 const Contact = () => {
@@ -86,10 +86,10 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Techora | Get in Touch</title>
+        <title>Contact Us - AlphaTech | Get in Touch</title>
         <meta
           name="description"
-          content="Contact Techora for your digital transformation needs. Reach out for web development, mobile apps, AI solutions, and more. We're here to help."
+          content="Contact AlphaTech for your digital transformation needs. Reach out for web development, mobile apps, AI solutions, and more. We're here to help."
         />
       </Helmet>
 
@@ -258,10 +258,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
                     <a
-                      href="mailto:contact@techora.tn"
+                      href="mailto:contact@alphatech.tn"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      techora2026@gmail.com
+                      alphatechtn2026@gmail.com
                     </a>
                   </div>
                 </div>
@@ -294,7 +294,7 @@ const Contact = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Techora Location"
+                  title="AlphaTech Location"
                   className="grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>

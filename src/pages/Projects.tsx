@@ -62,10 +62,10 @@ const Projects = () => {
   return (
     <>
       <Helmet>
-        <title>Our Projects - Techora | Portfolio of Digital Solutions</title>
+        <title>Our Projects - AlphaTech | Portfolio of Digital Solutions</title>
         <meta
           name="description"
-          content="Explore Techora's portfolio of successful projects across FinTech, Healthcare, Supply Chain, EdTech, and more. See our work in action."
+          content="Explore AlphaTech's portfolio of successful projects across FinTech, Healthcare, Supply Chain, EdTech, and more. See our work in action."
         />
       </Helmet>
 

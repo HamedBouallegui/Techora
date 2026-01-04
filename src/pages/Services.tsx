@@ -106,10 +106,10 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Our Services - Techora | Web, Mobile, AI & Enterprise Solutions</title>
+        <title>Our Services - AlphaTech | Web, Mobile, AI & Enterprise Solutions</title>
         <meta
           name="description"
-          content="Explore Techora's comprehensive services: web development, mobile apps, presentation creation, AI solutions, digital marketing, and graphic design."
+          content="Explore AlphaTech's comprehensive services: web development, mobile apps, presentation creation, AI solutions, digital marketing, and graphic design."
         />
       </Helmet>
 

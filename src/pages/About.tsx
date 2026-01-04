@@ -49,10 +49,10 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - Techora | Our Story, Mission & Team</title>
+        <title>About Us - AlphaTech | Our Story, Mission & Team</title>
         <meta
           name="description"
-          content="Learn about Techora's journey, our mission to transform businesses through technology, and meet our expert team of developers and designers."
+          content="Learn about AlphaTech's journey, our mission to transform businesses through technology, and meet our expert team of developers and designers."
         />
       </Helmet>
 
@@ -82,10 +82,10 @@ const About = () => {
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Techora is an IT services company based in Sidi Bouzid, Tunisia, dedicated to delivering reliable and modern digital solutions. We specialize in web and application development, IT consulting, and innovative technology services tailored to meet business needs.
+                  AlphaTech is an IT services company based in Sidi Bouzid, Tunisia, dedicated to delivering reliable and modern digital solutions. We specialize in web and application development, IT consulting, and innovative technology services tailored to meet business needs.
                 </p>
                 <p>
-                  Our mission is to help startups and companies grow through smart, secure, and scalable technology. At Techora, we focus on quality, simplicity, and performance to turn ideas into effective digital products.
+                  Our mission is to help startups and companies grow through smart, secure, and scalable technology. At AlphaTech, we focus on quality, simplicity, and performance to turn ideas into effective digital products.
                 </p>
               </div>
             </div>
@@ -93,7 +93,7 @@ const About = () => {
               <div className="aspect-square rounded-2xl overflow-hidden transform-3d-hover">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=800&fit=crop"
-                  alt="Techora team collaboration"
+                  alt="AlphaTech team collaboration"
                   className="w-full h-full object-cover"
                 />
               </div>

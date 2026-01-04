@@ -20,7 +20,7 @@ const socialLinks = [
   { icon: Linkedin, href: "#", label: "LinkedIn" },
   { icon: Instagram, href: "#", label: "Instagram" },
   { icon: Github, href: "#", label: "GitHub" },
-  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61585852116307", label: "Facebook" },
 ];
 
 export const Footer = () => {
@@ -33,12 +33,12 @@ export const Footer = () => {
             <Link to="/" className="flex items-center gap-3 text-2xl font-bold group">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-2 group-hover:scale-110 transition-transform duration-300">
                 <img
-                  src="/techora-logo.png"
-                  alt="Techora Logo"
+                  src="/alphatech-logo.png"
+                  alt="AlphaTech Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Techora</span>
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">AlphaTech</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Transforming businesses through innovative digital solutions. We build the future, one line of code at a time.
@@ -110,8 +110,8 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <a href="mailto:hello@techora.io" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                  hello@techora.io
+                <a href="mailto:hello@alphatech.io" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                  alphatechtn2026@gmail.com
                 </a>
               </li>
             </ul>
@@ -121,7 +121,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Techora. All rights reserved.
+            © {new Date().getFullYear()} AlphaTech. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
