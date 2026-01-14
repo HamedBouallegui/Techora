@@ -33,14 +33,7 @@ const team = [
     github: "https://github.com/HamedBouallegui",
     portfolio: "https://hamedbouallagui.vercel.app/",
   },
-  {
-    name: "Hayder Laabidi",
-    role: "Mobile Developer",
-    image: "/hayder.png",
-    linkedin: "https://www.linkedin.com/in/hayder-labidi/",
-    github: "https://github.com/HayderLabidi",
-    portfolio: "https://hayderlabidi.netlify.app/",
-  },
+
 
 
 ];
